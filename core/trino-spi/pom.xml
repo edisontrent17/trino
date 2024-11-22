@@ -217,6 +217,14 @@
                                     <old>method io.trino.spi.connector.RecordCursor io.trino.spi.connector.SystemTable::cursor(io.trino.spi.connector.ConnectorTransactionHandle, io.trino.spi.connector.ConnectorSession, io.trino.spi.predicate.TupleDomain&lt;java.lang.Integer&gt;, java.util.Set&lt;java.lang.Integer&gt;)</old>
                                     <new>method io.trino.spi.connector.RecordCursor io.trino.spi.connector.SystemTable::cursor(io.trino.spi.connector.ConnectorTransactionHandle, io.trino.spi.connector.ConnectorSession, io.trino.spi.predicate.TupleDomain&lt;java.lang.Integer&gt;, java.util.Set&lt;java.lang.Integer&gt;, io.trino.spi.connector.ConnectorSplit)</new>
                                 </item>
+                                <item>
+                                    <ignore>true</ignore>
+                                    <code>java.annotation.removed</code>
+                                    <old>method byte[] io.trino.spi.type.SqlVarbinary::getBytes()</old>
+                                    <new>method byte[] io.trino.spi.type.SqlVarbinary::getBytes()</new>
+                                    <annotation>@com.fasterxml.jackson.annotation.JsonValue</annotation>
+                                    <justification>On-the-wire representation shouldn't rely on the Jackson format</justification>
+                                </item>
                             </differences>
                         </revapi.differences>
                     </analysisConfiguration>
