@@ -9,7 +9,7 @@
 
     <artifactId>presto-cassandra</artifactId>
     <description>Presto - Cassandra Connector</description>
-    <packaging>presto-plugin</packaging>
+
 
     <properties>
         <air.main.basedir>${project.parent.basedir}</air.main.basedir>

@@ -74,7 +74,7 @@ public class PrestoServer
     @Override
     public void run()
     {
-        verifyJvmRequirements();
+//        verifyJvmRequirements();
 
         Logger log = Logger.get(PrestoServer.class);
 

@@ -21,7 +21,6 @@ import com.facebook.presto.sql.tree.Statement;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 
-import javax.annotation.Nullable;
 
 import java.util.List;
 
@@ -66,7 +65,7 @@ public final class TreeAssertions
         new DefaultTraversalVisitor<Node, Void>()
         {
             @Override
-            public Node process(Node node, @Nullable Void context)
+            public Node process(Node node, Void context)
             {
                 Node result = super.process(node, context);
                 nodes.add(node);

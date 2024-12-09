@@ -29,6 +29,7 @@ import io.airlift.command.Command;
 import io.airlift.command.HelpOption;
 import io.airlift.log.Logging;
 import io.airlift.log.LoggingConfiguration;
+import java.util.Scanner;
 import jline.console.history.FileHistory;
 import jline.console.history.MemoryHistory;
 import org.fusesource.jansi.AnsiConsole;
@@ -117,13 +118,14 @@ public class Console
                 LineReader reader = new LineReader(getHistory(), tableNameCompleter)) {
             tableNameCompleter.populateCache();
             StringBuilder buffer = new StringBuilder();
+            Scanner scanner = new Scanner(System.in);
             while (true) {
                 // read a line of input from user
                 String prompt = PROMPT_NAME + ":" + session.getSchema();
                 if (buffer.length() > 0) {
                     prompt = Strings.repeat(" ", prompt.length() - 1) + "-";
                 }
-                String line = reader.readLine(prompt + "> ");
+                String line = scanner.nextLine();
 
                 // add buffer to history and clear on user interrupt
                 if (reader.interrupted()) {

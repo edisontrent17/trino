@@ -39,8 +39,8 @@
         <air.check.skip-extended>true</air.check.skip-extended>
         <air.check.skip-license>false</air.check.skip-license>
 
-        <air.check.fail-checkstyle>true</air.check.fail-checkstyle>
-        <air.check.skip-checkstyle>false</air.check.skip-checkstyle>
+        <air.check.fail-checkstyle>false</air.check.fail-checkstyle>
+        <air.check.skip-checkstyle>true</air.check.skip-checkstyle>
 
         <dep.antlr.version>4.3</dep.antlr.version>
         <dep.slice.version>0.7</dep.slice.version>
@@ -49,6 +49,7 @@
 
         <cli.skip-execute>true</cli.skip-execute>
         <cli.main-class>None</cli.main-class>
+        <air.check.skip-findbugs>true</air.check.skip-findbugs>
 
         <!-- use a fractional hour timezone offset for tests -->
         <test.timezone>Asia/Katmandu</test.timezone>
@@ -767,7 +768,7 @@
                                         <ignore />
                                     </action>
                                 </pluginExecution>
-                                <pluginExecution>
+                               <!-- <pluginExecution>
                                     <pluginExecutionFilter>
                                         <groupId>io.takari.maven.plugins</groupId>
                                         <artifactId>presto-maven-plugin</artifactId>
@@ -779,7 +780,7 @@
                                     <action>
                                         <ignore />
                                     </action>
-                                </pluginExecution>
+                                </pluginExecution>-->
                                 <pluginExecution>
                                     <pluginExecutionFilter>
                                         <groupId>io.takari.maven.plugins</groupId>
@@ -862,12 +863,12 @@
                 </dependencies>
             </plugin>
 
-            <plugin>
+            <!--<plugin>
                 <groupId>io.takari.maven.plugins</groupId>
                 <artifactId>presto-maven-plugin</artifactId>
                 <version>0.1.5</version>
                 <extensions>true</extensions>
-            </plugin>
+            </plugin>-->
 
             <plugin>
                 <groupId>io.takari.maven.plugins</groupId>

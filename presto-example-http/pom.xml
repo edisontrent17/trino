@@ -9,7 +9,7 @@
 
     <artifactId>presto-example-http</artifactId>
     <description>Presto - Example HTTP Connector</description>
-    <packaging>presto-plugin</packaging>
+
 
     <properties>
         <air.main.basedir>${project.parent.basedir}</air.main.basedir>

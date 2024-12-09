@@ -10,7 +10,7 @@
 
     <artifactId>presto-hive-cdh4</artifactId>
     <description>Presto - Hive Connector - CDH 4</description>
-    <packaging>presto-plugin</packaging>
+
 
     <properties>
         <air.main.basedir>${project.parent.basedir}</air.main.basedir>

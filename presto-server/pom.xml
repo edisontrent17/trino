@@ -10,7 +10,7 @@
 
     <artifactId>presto-server</artifactId>
     <name>presto-server</name>
-    <packaging>provisio</packaging>
+    <packaging>pom</packaging>
 
     <properties>
         <air.main.basedir>${project.parent.basedir}</air.main.basedir>

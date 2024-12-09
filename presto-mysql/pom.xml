@@ -10,7 +10,7 @@
 
     <artifactId>presto-mysql</artifactId>
     <description>Presto - MySQL Connector</description>
-    <packaging>presto-plugin</packaging>
+
 
     <properties>
         <air.main.basedir>${project.parent.basedir}</air.main.basedir>

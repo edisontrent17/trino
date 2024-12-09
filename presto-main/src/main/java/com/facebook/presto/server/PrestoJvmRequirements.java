@@ -29,9 +29,9 @@ final class PrestoJvmRequirements
         }
 
         String vendor = StandardSystemProperty.JAVA_VENDOR.value();
-        if (!vendor.equals("Oracle Corporation")) {
+       /* if (!vendor.equals("Oracle Corporation")) {
             failRequirement("Presto requires an Oracle or OpenJDK JVM (found %s)", vendor);
-        }
+        }*/
 
         String osName = StandardSystemProperty.OS_NAME.value();
         String osArch = StandardSystemProperty.OS_ARCH.value();

@@ -43,6 +43,7 @@ public class SqlParser
         @Override
         public void syntaxError(@NotNull Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, @NotNull String message, RecognitionException e)
         {
+            System.out.println("Parse Error " + message);
             throw new ParsingException(message, e, line, charPositionInLine);
         }
     };
@@ -90,7 +91,7 @@ public class SqlParser
             try {
                 // first, try parsing with potentially faster SLL mode
                 parser.getInterpreter().setPredictionMode(PredictionMode.SLL);
-                tree = parseFunction.apply(parser);
+                tree = parser.singleStatement();
             }
             catch (ParseCancellationException ex) {
                 // if we fail, parse with LL mode
@@ -174,5 +175,11 @@ public class SqlParser
                     token.getStartIndex(),
                     token.getStopIndex()));
         }
+    }
+
+    public static void main(String [] args){
+        String sql = "Select * from Test";
+        SqlParser parser = new SqlParser();
+        parser.createStatement(sql);
     }
 }

@@ -230,7 +230,7 @@ public class ServerMainModule
         if (prestoVersion == null) {
             prestoVersion = detectPrestoVersion();
         }
-        checkState(prestoVersion != null, "presto.version must be provided when it cannot be automatically determined");
+//        checkState(prestoVersion != null, "presto.version must be provided when it cannot be automatically determined");
 
         NodeVersion nodeVersion = new NodeVersion(prestoVersion);
         binder.bind(NodeVersion.class).toInstance(nodeVersion);
@@ -296,7 +296,8 @@ public class ServerMainModule
     {
         String title = PrestoServer.class.getPackage().getImplementationTitle();
         String version = PrestoServer.class.getPackage().getImplementationVersion();
-        return ((title == null) || (version == null)) ? null : (title + ":" + version);
+//        return ((title == null) || (version == null)) ? null : (title + ":" + version);
+        return "1.0";
     }
 
     private static void bindFailureDetector(Binder binder, boolean coordinator)

@@ -10,7 +10,7 @@
 
     <artifactId>presto-kafka</artifactId>
     <description>Presto - Kafka Connector</description>
-    <packaging>presto-plugin</packaging>
+
 
     <properties>
         <air.main.basedir>${project.parent.basedir}</air.main.basedir>

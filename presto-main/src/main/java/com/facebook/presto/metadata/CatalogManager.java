@@ -66,7 +66,7 @@ public class CatalogManager
         }
 
         for (File file : listFiles(catalogConfigurationDir)) {
-            if (file.isFile() && file.getName().endsWith(".properties")) {
+            if (file.isFile() && file.getName().endsWith(".properties") /*&& file.getName().contains("jmx")*/) {
                 loadCatalog(file);
             }
         }

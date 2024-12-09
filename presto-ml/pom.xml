@@ -9,7 +9,7 @@
 
     <artifactId>presto-ml</artifactId>
     <description>Presto - Machine Learning Plugin</description>
-    <packaging>presto-plugin</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <air.main.basedir>${project.parent.basedir}</air.main.basedir>
